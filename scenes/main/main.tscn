@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b88k2tgllw5wh"]
+
+[ext_resource type="PackedScene" uid="uid://qe6udoaqlm6c" path="res://scenes/parallax_background/parallax_background.tscn" id="1_o0bdu"]
+[ext_resource type="PackedScene" uid="uid://b54gdkuouj0fy" path="res://scenes/player/player.tscn" id="1_qygou"]
+[ext_resource type="PackedScene" uid="uid://bugru2ykwhk0u" path="res://scenes/hud/hud.tscn" id="3_0ijvt"]
+[ext_resource type="PackedScene" uid="uid://c3cqc88pek53j" path="res://scenes/spawner/spawner.tscn" id="3_sbf3d"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_o0bdu")]
+
+[node name="Spawner" parent="." instance=ExtResource("3_sbf3d")]
+
+[node name="Player" parent="." instance=ExtResource("1_qygou")]
+position = Vector2(960, 512)
+
+[node name="HUD" parent="." instance=ExtResource("3_0ijvt")]

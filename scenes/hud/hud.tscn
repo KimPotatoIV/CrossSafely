@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bugru2ykwhk0u"]
+
+[ext_resource type="Script" path="res://scenes/hud/hud.gd" id="1_7r5ob"]
+[ext_resource type="FontFile" uid="uid://nu7neis21ibf" path="res://fonts/Ramche.ttf" id="1_bh22m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bqfjl"]
+font = ExtResource("1_bh22m")
+font_size = 80
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ixl37"]
+font = ExtResource("1_bh22m")
+font_size = 160
+shadow_size = 16
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_7r5ob")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.5
+offset_top = 40.0
+offset_right = 186.5
+offset_bottom = 120.0
+grow_horizontal = 2
+text = "SCORE 0"
+label_settings = SubResource("LabelSettings_bqfjl")
+horizontal_alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -40.0
+offset_right = 230.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_ixl37")
+horizontal_alignment = 1
